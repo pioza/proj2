@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>Programowanie internetowe</title>
+	<meta name ="description" content = "Formularz" />
+	<link rel="stylesheet" href="style2.css" type="text/css" />
+	<script src ="form3j.js"> </script>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	
+</head>
+
+<body>
+
+
+	<div id="container">
+	
+		<div id ="logo">
+			<h1>Programowanie internetowe <br/></h1>
+		</div>	
+		
+		<div id ="nav">
+		<a href="index.html">Strona domowa</a > <br />
+		</div>
+		
+		<form method="post" name="form" enctype="multipart/form-data" onsubmit="return(sprawdz())" >
+		<div id = "content">
+		    ImiÄ™ <br /> <input type = "text" name = "imie" id="imieID" onchange="sprawdzLitery(value)" required /> <br />
+			Nazwisko <br /> <input type = "text" name = "nazwisko" id="nazwiskoID" onchange="sprawdzLitery(value)" required /> <br />
+			Data urodzenia<br />(RRMMDD)<br /> <input type="text" name="data" id="urDat" style="width:150px" /> <br />
+			PESEL <br /> <input type = "text" name = "pesel" id="peselID" pattern=".{11,11}"  required title="Prosze wpisac poprawnie PESEL" onkeypress="return sprawdzCyfry(event)" onchange="sprawdzPESEL()" /> <br />
+			Wiek <br /> <input type = "number" name = "wiek" id="wiekID" min="1" step="1" placeholder="21"  value="20" /> <br /> 
+			PĹ‚eÄ‡ <br /> <select name = "plec"  style ="width:150px">
+				<option value="b">-</option>
+				<option value="k">kobieta</option>
+				<option value="m">mÄ™ĹĽczyzna</option>
+			</select> <br /> 
+			<br />Kierunek studiĂłw <br /> 
+				<input type = "radio" value = "s" name = "kierunek"  /> socjologia <br /> 
+				<input type = "radio" value = "p" name = "kierunek"  /> prawo<br /> 
+				<input type = "radio" value = "m" name = "kierunek"  /> medycyna<br /> <br />
+			Upload pliku: <input type ="file" name="plik" id="plikID" accept=".jpg, .tif, .png" /> <br /><br />
+			Komentarz:<br /> 
+				<textarea id="kom" cols="40" rows="5" onkeyup="MaxRozmiar()" maxlength="255" ></textarea><br />
+			ZostaĹ‚o <input type="text" id="licznik" value="255" style ="width:25px" readonly />znakĂłw<br />
+			<input type = "checkbox" id="zgoda" required/> WyraĹĽam zgodÄ™ na przetwarzanie<br />moich danych osobowych <br />
+			
+			<input type="submit" value="ZatwierdĹş" />
+		</div>
+		</form>
+		
+		<div id ="ad">
+			<img src=rafal1.jpg alt="Tu powinno byÄ‡ zdjÄ™cie RafaĹ‚a Ziemkiewicza"/>
+		</div>
+		
+		<div id = "footer">
+		<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fiem.pw.edu.pl%2F~zadroznp%2Fform3.html">walidacjaHTML</a >
+		    
+			<p><a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Poprawny CSS!" />
+    </a> </p><br />
+		 <br />
+		&copy; &reg; Wszelkie prawa zastrzeĹĽone <a href="form--kod.html">Kod HTML</a > <br />
+		</div>
+	</div>
+</body>
+</html><!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>Programowanie internetowe</title>
+	<meta name ="description" content = "Formularz" />
+	<link rel="stylesheet" href="style2.css" type="text/css" />
+	<script src ="form3j.js"> </script>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	
+</head>
+
+<body>
+
+
+	<div id="container">
+	
+		<div id ="logo">
+			<h1>Programowanie internetowe <br/></h1>
+		</div>	
+		
+		<div id ="nav">
+		<a href="index.html">Strona domowa</a > <br />
+		</div>
+		
+		<form method="post" name="form" enctype="multipart/form-data" onsubmit="return(sprawdz())" >
+		<div id = "content">
+		    ImiÄ™ <br /> <input type = "text" name = "imie" id="imieID" onchange="sprawdzLitery(value)" required /> <br />
+			Nazwisko <br /> <input type = "text" name = "nazwisko" id="nazwiskoID" onchange="sprawdzLitery(value)" required /> <br />
+			Data urodzenia<br />(RRMMDD)<br /> <input type="text" name="data" id="urDat" style="width:150px" /> <br />
+			PESEL <br /> <input type = "text" name = "pesel" id="peselID" pattern=".{11,11}"  required title="Prosze wpisac poprawnie PESEL" onkeypress="return sprawdzCyfry(event)" onchange="sprawdzPESEL()" /> <br />
+			Wiek <br /> <input type = "number" name = "wiek" id="wiekID" min="1" step="1" placeholder="21"  value="20" /> <br /> 
+			PĹ‚eÄ‡ <br /> <select name = "plec"  style ="width:150px">
+				<option value="b">-</option>
+				<option value="k">kobieta</option>
+				<option value="m">mÄ™ĹĽczyzna</option>
+			</select> <br /> 
+			<br />Kierunek studiĂłw <br /> 
+				<input type = "radio" value = "s" name = "kierunek"  /> socjologia <br /> 
+				<input type = "radio" value = "p" name = "kierunek"  /> prawo<br /> 
+				<input type = "radio" value = "m" name = "kierunek"  /> medycyna<br /> <br />
+			Upload pliku: <input type ="file" name="plik" id="plikID" accept=".jpg, .tif, .png" /> <br /><br />
+			Komentarz:<br /> 
+				<textarea id="kom" cols="40" rows="5" onkeyup="MaxRozmiar()" maxlength="255" ></textarea><br />
+			ZostaĹ‚o <input type="text" id="licznik" value="255" style ="width:25px" readonly />znakĂłw<br />
+			<input type = "checkbox" id="zgoda" required/> WyraĹĽam zgodÄ™ na przetwarzanie<br />moich danych osobowych <br />
+			
+			<input type="submit" value="ZatwierdĹş" />
+		</div>
+		</form>
+		
+		<div id ="ad">
+			<img src=rafal1.jpg alt="Tu powinno byÄ‡ zdjÄ™cie RafaĹ‚a Ziemkiewicza"/>
+		</div>
+		
+		<div id = "footer">
+		<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fiem.pw.edu.pl%2F~zadroznp%2Fform3.html">walidacjaHTML</a >
+		    
+			<p><a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Poprawny CSS!" />
+    </a> </p><br />
+		 <br />
+		&copy; &reg; Wszelkie prawa zastrzeĹĽone <a href="form--kod.html">Kod HTML</a > <br />
+		</div>
+	</div>
+</body>
+</html>
